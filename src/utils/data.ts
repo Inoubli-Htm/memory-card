@@ -1,0 +1,58 @@
+export const CardsArray = [
+  {
+    id: 1,
+    symbolPath: "../assets/images/css.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+  {
+    id: 2,
+    symbolPath: "../assets/images/html.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+  {
+    id: 3,
+    symbolPath: "../assets/images/javascript.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+  {
+    id: 4,
+    symbolPath: "../assets/images/typescript.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+  {
+    id: 5,
+    symbolPath: "../assets/images/react.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+  {
+    id: 6,
+    symbolPath: "../assets/images/redux.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+  {
+    id: 7,
+    symbolPath: "../assets/images/git.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+  {
+    id: 8,
+    symbolPath: "../assets/images/github.png",
+    cardBack: "../assets/images/back-card.png",
+    isFlipped: false,
+    isMatched: false,
+  },
+];
