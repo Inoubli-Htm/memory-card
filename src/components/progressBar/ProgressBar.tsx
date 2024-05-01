@@ -1,5 +1,36 @@
 import React, { FC } from "react";
-import styles from "./ProgressBar.module.scss";
+import styled from "styled-components";
+
+const ProgressBarContainer = styled.div`
+  background-color: #bebebe;
+  height: 20px;
+  margin: 16px 0;
+  border-radius: 10px;
+  width: 30%;
+
+  .progress_bar {
+    width: 70%;
+    height: 20px;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+  }
+
+  & ._green {
+    background-color: green;
+  }
+
+  & ._yellow {
+    background-color: yellow;
+  }
+
+  & ._orange {
+    background-color: orange;
+  }
+
+  & ._red {
+    background-color: red;
+  }
+`;
 
 interface ProgressBarProps {
   percentGameComplete: number;
@@ -8,21 +39,21 @@ interface ProgressBarProps {
 const ProgressBar: FC<ProgressBarProps> = ({ percentGameComplete }) => {
   const getProgressBarColor = () =>
     percentGameComplete >= 70
-      ? styles._green
+      ? "_green"
       : percentGameComplete >= 40
-      ? styles._orange
+      ? "_orange"
       : percentGameComplete >= 20
-      ? styles._yellow
-      : styles._red;
+      ? "_yellow"
+      : "_red";
 
   return (
-    <div className={styles.progress_bar_container}>
+    <ProgressBarContainer>
       <div
-        className={`${styles.progress_bar} ${getProgressBarColor()}`}
+        className={`progress_bar ${getProgressBarColor()}`}
         style={{ width: `${percentGameComplete}%` }}
         data-testid="progress_bar"
       ></div>
-    </div>
+    </ProgressBarContainer>
   );
 };
 

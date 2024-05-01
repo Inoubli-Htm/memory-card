@@ -1,9 +1,21 @@
-// Timer.tsx
 import React, { FC, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setGameStart, decrementTimer } from "../../redux/cards/cardsSlice";
 import { RootState } from "../../redux/rootReducers";
-import styles from "./Timer.module.scss";
+import styled from "styled-components";
+
+const TimerWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  h3,
+  p {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
+  }
+`;
 
 const Timer: FC<{ GameStatus: string }> = ({ GameStatus }) => {
   const dispatch = useDispatch();
@@ -34,10 +46,10 @@ const Timer: FC<{ GameStatus: string }> = ({ GameStatus }) => {
   }, [chrono, isStartedGame, GameStatus, dispatch]);
 
   return (
-    <div className={styles.timer}>
+    <TimerWrapper>
       <h3>Remaining time:</h3>
       <p>{chrono} s</p>
-    </div>
+    </TimerWrapper>
   );
 };
 
